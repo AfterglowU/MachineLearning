@@ -29,7 +29,7 @@ def dbscan(data_array:np.array, eps:float, minpoints:int) -> np.array:
         not_visited_old = not_visited.copy()
         # Pick one core object randomly
         cores = list(core_objects.keys())
-        rand = random.randint(0,len(cores))
+        rand = random.randint(0,len(cores)-1)
         core = cores[rand]
         queue = [core]
         not_visited.remove(core)
